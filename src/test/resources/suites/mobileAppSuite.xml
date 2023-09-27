@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Мобильный банк">
+    <test name="Стартовый экран">
+        <classes>
+            <class name="tests.authorization.login.DataValidTest"/>
+            <class name="tests.account.SendRequisitesOnEmptyEmailTest"/>
+            <class name="tests.account.SendRequisitesOnNotValidEmailTest"/>
+            <class name="tests.deposits.OutgoingTransferSavingAccTest"/>
+            <class name="tests.deposits.OutdoingTransferDepositTest"/>
+            <class name="tests.paymentsAndTransfers.betweenAccounts.NotEnoughFundsToPaymentTest"/>
+            <class name="tests.paymentsAndTransfers.betweenAccounts.ValidDataTest"/>
+        </classes>
+    </test>
+</suite>

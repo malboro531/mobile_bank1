@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Mobile bank">
+    <parameter name="email" value="ext_sulavv@ubrr.ru"/>
+    <parameter name="login" value="9990040083167"/>
+    <parameter name="password" value="1111"/>
+    <suite-files>
+        <suite-file path="suites/demoVersionSuite.xml"/>
+    </suite-files>
+</suite>

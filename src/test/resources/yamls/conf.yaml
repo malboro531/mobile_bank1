@@ -1,0 +1,29 @@
+devices:
+  - deviceName: "realme6Pro"
+    platformName: "Android"
+    platformVersion: 10.0
+  - deviceName: "pixel3aAPI30"
+    platformName: "Android"
+    platformVersion: "11.0"
+pathToMyApp: "/src/main/resources/app/ubrir.apk"
+myAppPackage: "cb.ibank"
+myAppActivity: "cb.ibank.activities.StartupActivity"
+
+
+#capabilities:
+#  deviceName:
+#    realDevice:
+#      realme: "realme6Pro"
+#    virtualDevice:
+#      pixel3a: "Pixel_3a_API_30"
+#      pixel: "Pixel_API_24"
+#  platformName: "Android"
+#  platformVersion:
+#    realDevice:
+#      realme: "realme6Pro"
+#    virtualDevice:
+#      pixel3a: "Pixel_3a_API_30"
+#      pixel: "Pixel_API_24"
+#  pathToMyApp: "src/main/resources/app/ubrir5_12_4"
+#  myAppPackage: "cb.ibank"
+#  myAppActivity: "cb.ibank.activities.StartupActivity"

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Стартовый экран">
+    <test name="Стартовый экран">
+        <classes>
+            <class name="tests.mainscreen.DepartmentAddressesTest"/>
+            <class name="tests.mainscreen.BecomeClientTest"/>
+            <class name="tests.mainscreen.CurrencyRateTest"/>
+        </classes>
+    </test>
+</suite>

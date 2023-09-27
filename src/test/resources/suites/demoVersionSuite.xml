@@ -1,0 +1,81 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Демо-режим">
+    <parameter name="email" value="ext_sulavv@ubrr.ru"/>
+    <test name="Счета и вклады">
+        <parameter name="invalidEmail" value="asdasd@gmail.com"/>
+        <classes>
+            <class name="tests.demoversion.accountAndDeposits.AccountRefillTest"/>
+            <class name="tests.demoversion.accountAndDeposits.AccountEditNameTest"/>
+            <class name="tests.demoversion.accountAndDeposits.AddNewCardTest"/>
+            <class name="tests.demoversion.accountAndDeposits.RefillWithCardOtherBankTest"/>
+            <class name="tests.demoversion.accountAndDeposits.RefillAndRequestPaymentTest"/>
+            <class name="tests.demoversion.accountAndDeposits.CertificateAvailableResidueTest"/>
+        </classes>
+    </test>
+
+    <test name="Карта">
+        <classes>
+            <class name="tests.demoversion.card.CashBackTest"/>
+            <class name="tests.demoversion.card.SetPinCodeTest"/>
+            <class name="tests.demoversion.card.EditPinCodeTest"/>
+            <class name="tests.demoversion.card.TariffPlanTest"/>
+            <class name="tests.demoversion.card.LimitTest"/>
+            <class name="tests.demoversion.card.ViewCardTest"/>
+
+        </classes>
+    </test>
+
+    <test name="Раздел 'Ещё'">
+        <parameter name="phoneNumber" value="27102-63-08"/>
+        <classes>
+            <class name="tests.demoversion.more.LogoutTest"/>
+            <class name="tests.demoversion.more.FastPaymentSystemTest"/>
+            <class name="tests.demoversion.more.ChangePasswordTest"/>
+            <class name="tests.demoversion.more.PersonalDataTest"/>
+            <class name="tests.demoversion.more.LogonByFingerprintTest"/>
+            <class name="tests.demoversion.more.PushNotificationsTest"/>
+            <class name="tests.demoversion.more.CallToBankTest"/>
+            <class name="tests.demoversion.more.CurrencyRateTest"/>
+            <class name="tests.demoversion.more.DeleteNumberForSmsNoticesTest"/>
+            <class name="tests.demoversion.more.PhoneNumberAdditionTest"/>
+        </classes>
+    </test>
+
+    <test name="Платежи и переводы">
+        <classes>
+            <class name="tests.demoversion.paymentsAndTransfers.transfers.ByPhoneNumberTest">
+                <parameter name="sumForTransfer" value="10000"/>
+            </class>
+            <class name="tests.demoversion.paymentsAndTransfers.transfers.BetweenAccountsTest">
+                <!--FLAKY!!!-->
+                <parameter name="sum" value="1500.56"/>
+                <!--FLAKY!!!-->
+            </class>
+            <class name="tests.demoversion.paymentsAndTransfers.transfers.ByCardNumberTest">
+                <parameter name="cardNumber" value="1600 4522 5555 2000"/>
+                <parameter name="sum" value="1234.56"/>
+                <parameter name="comment" value="qwerty"/>
+            </class>
+            <class name="tests.demoversion.paymentsAndTransfers.transfers.ByRequisitesTest"/>
+            <class name="tests.demoversion.paymentsAndTransfers.transfers.SystemOfFastPaymentTest"/>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.ByQRCodeTest"/>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.MobileConnectionTest">
+                <parameter name="phoneNumber" value="+79827522233"/>
+                <parameter name="sum" value="1500.56"/>
+            </class>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.EducationTest"/>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.HomePhoneTest"/>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.InternetAndTVTest"/>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.InternetAndTVByVendorFromListTest">
+                <parameter name="account" value="9923491935"/>
+                <parameter name="sum" value="110.15"/>
+            </class>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.InternetAndTVByVendorBySearchTest">
+                <parameter name="account" value="9923491935"/>
+                <parameter name="sum" value="110.15"/>
+                <parameter name="inn" value="7740000076"/>
+            </class>
+            <class name="tests.demoversion.paymentsAndTransfers.payments.PaymentOfUtilityServicesTest"/>
+        </classes>
+    </test>
+</suite>
